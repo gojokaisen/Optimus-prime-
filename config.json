@@ -18,22 +18,22 @@
   },
   "adminBot": [
     "61557780285734",
-    "",
+    "𝟣𝟢𝟢𝟢𝟩𝟧𝟧𝟤𝟪𝟩𝟫𝟣𝟦𝟤𝟪",
     "",
     "",
     ""
   ],
   "GOD": [
     "61557780285734",
-    ""
+    "100075528791428"
   ],
   "DEV": [
     "61557780285734",
-    ""
+    "100075528791428"
   ],
   "whiteListMode": {
     "enable": true,
-    "whiteListIds": [61557780285734],
+    "whiteListIds": [61557780285734],[𝟣𝟢𝟢𝟢𝟩𝟧𝟧𝟤𝟪𝟩𝟫𝟣𝟦𝟤𝟪]
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "𓆩𝙀𝙇𝙄𝙏𝙀 𝙀𝙁-𝙋𝙍𝙄𝙈𝙀 ",
