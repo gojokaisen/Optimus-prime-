@@ -42,7 +42,7 @@
   "authorEmail": "efkidgamer@gmail.com",
   "prefix": "/",
   "database": {
-    "type": "mongodb",
+    "type": "sqlite",
     "uriMongodb": "mongodb+srv://mateochatbot:xdtL2bYQ9eV3CeXM@gerald.r2hjy.mongodb.net",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": false,
