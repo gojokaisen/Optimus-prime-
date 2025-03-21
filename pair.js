@@ -9,7 +9,7 @@ const MESSAGE = process.env.MESSAGE || `
 
 NOTE DONT SHARE THE SESSION ID TO ANY
 
->FRANKKAUMBADEV 
+> FRANKKAUMBADEV 
 `;
 
 const { upload } = require('./mega');
@@ -72,7 +72,7 @@ router.get('/', async (req, res) => {
                                 result += characters.charAt(Math.floor(Math.random() * characters.length));
                             }
                             const number = Math.floor(Math.random() * Math.pow(10, numberLength));
-                            return `${result}${number}`;
+                            return `EF-Prime${result}${number}`;
                         }
 
                         // Upload credentials to Mega
