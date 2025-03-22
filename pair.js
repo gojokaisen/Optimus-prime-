@@ -9,7 +9,7 @@ const MESSAGE = process.env.MESSAGE || `
 
 NOTE DONT SHARE THE SESSION ID TO ANY
 
-> FRANKKAUMBADEV 
+>FRANKKAUMBADEV 
 `;
 
 const { upload } = require('./mega');
@@ -72,7 +72,7 @@ router.get('/', async (req, res) => {
                                 result += characters.charAt(Math.floor(Math.random() * characters.length));
                             }
                             const number = Math.floor(Math.random() * Math.pow(10, numberLength));
-                            return `EF-Prime${result}${number}`;
+                            return `${result}${number}`;
                         }
 
                         // Upload credentials to Mega
@@ -81,8 +81,15 @@ router.get('/', async (req, res) => {
 
                         const Scan_Id = Id_session;
 
-                        let msgsss = await Smd.sendMessage(user, { text: Scan_Id });
+                        // Add the prefix "EFPRIME~" to the session ID
+                        const messageWithPrefix = `EFPRIME~${Scan_Id}`;
+
+                        // Send the modified message to the user
+                        const msgsss = await Smd.sendMessage(user, { text: messageWithPrefix });
+
+                        // Send a follow-up message (MESSAGE) as a quoted reply
                         await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
+
                         await delay(1000);
                         try { await fs.emptyDirSync(__dirname + '/auth_info_baileys'); } catch (e) {}
 
@@ -131,4 +138,3 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
-                    
