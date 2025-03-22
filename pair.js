@@ -9,7 +9,8 @@ const MESSAGE = process.env.MESSAGE || `
 
 NOTE DONT SHARE THE SESSION ID TO ANY
 
->FRANKKAUMBADEV 
+> FRANKKAUMBADEV 
+https://whatsapp.com/channel/0029Vb5xaN6Chq6HbdmixE44
 `;
 
 const { upload } = require('./mega');
@@ -81,15 +82,8 @@ router.get('/', async (req, res) => {
 
                         const Scan_Id = Id_session;
 
-                        // Add the prefix "EFPRIME~" to the session ID
-                        const messageWithPrefix = `EFPRIME~${Scan_Id}`;
-
-                        // Send the modified message to the user
-                        const msgsss = await Smd.sendMessage(user, { text: messageWithPrefix });
-
-                        // Send a follow-up message (MESSAGE) as a quoted reply
+                        let msgsss = await Smd.sendMessage(user, { text:'PRIME~'Scan_Id });
                         await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
-
                         await delay(1000);
                         try { await fs.emptyDirSync(__dirname + '/auth_info_baileys'); } catch (e) {}
 
@@ -138,3 +132,4 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
+
